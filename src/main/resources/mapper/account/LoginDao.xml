@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itlou.exam.dao.account.LoginDao">
+
+<!--    <insert id="insertIfNotExist" parameterType="cn.itlou.exam.manager.account.dto.UserInfoDTO">-->
+<!--        INSERT INTO exam_user(user_name, user_password, user_email, user_mobile)-->
+<!--        SELECT #{userInfoDTO.userName}, #{userInfoDTO.userPassword}, #{userInfoDTO.userEmail}, #{userInfoDTO.userMobile} FROM DUAL-->
+<!--        WHERE NOT EXISTS (SELECT id FROM exam_user WHERE user_name = #{userInfoDTO.userName})-->
+<!--    </insert>-->
+
+    <select id="queryCountByPassword" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM exam_user WHERE user_name = #{userName} AND user_password = #{password}
+    </select>
+
+    <select id="queryCountByMobile" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM exam_user WHERE user_mobile = #{mobile}
+    </select>
+
+</mapper>
