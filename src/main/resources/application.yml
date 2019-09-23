@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: exam-user #Ö¸¶¨·şÎñÃû
+    name: exam-user #æŒ‡å®šæœåŠ¡å
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/exam?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
@@ -21,14 +21,14 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
   redis:
-    host: 114.67.72.37
+    host: ****
     port: 6379
-    password: redis123456
+    password: ****
 
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  #ÅäÖÃdao½Ó¿ÚÓësqlÓï¾äÓ³ÉäµÄxmlÎÄ¼şµÄÀàÂ·¾¶µØÖ·£¬**×¢Òâ²»ĞèÒª¼Óclasspath**
+  #é…ç½®daoæ¥å£ä¸sqlè¯­å¥æ˜ å°„çš„xmlæ–‡ä»¶çš„ç±»è·¯å¾„åœ°å€ï¼Œ**æ³¨æ„ä¸éœ€è¦åŠ classpath**
   mapper-locations: /mapper/*/*.xml
   type-aliases-package : com.keyou.domain.basicQuery
